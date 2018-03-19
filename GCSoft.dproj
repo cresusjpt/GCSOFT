@@ -1,0 +1,394 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{A5A9B5E1-5B99-421F-B451-A9BB721AB568}</ProjectGuid>
+			<MainSource>GCSoft.dpr</MainSource>
+			<ProjectVersion>12.2</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vclx;vcl;rtl;vclimg;vcldb;QR5RunDXE;bdertl;vclactnband;xmlrtl;VclSmp;svnui;svn;TeeUI;TeeDB;Tee;dbrtl;vcldbx;vcltouch;dsnap;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_110_150;Intraweb_110_150;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;acntDelphiXE_R;AlphaDBDelphiXE;JclDeveloperTools;Jcl;JclVcl;JclContainers;JvCore;JvSystem;JvStdCtrls;JvAppFrm;JvBands;JvDB;JvDlgs;JvBDE;JvControls;JvCmp;JvCrypt;JvCustom;JvDocking;JvDotNetCtrls;JvGlobus;JvHMI;JvJans;JvManagedThreads;JvMM;JvNet;JvPageComps;JvPascalInterpreter;JvPluginSystem;JvPrintPreview;JvRuntimeDesign;JvTimeFramework;JvWizards;JvXPCtrls;AcroPDFLib_TLB;CodeSiteExpressVcl;Rave90VCL</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>.\$(Config)\$(Platform)</DCC_ExeOutput>
+			<DCC_E>false</DCC_E>
+			<DCC_N>false</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_K>false</DCC_K>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_ExeOutput>C:\PROJETS\gcsoftOut</DCC_ExeOutput>
+			<DCC_DcuOutput>C:\PROJETS\gcsoftOut\dcu</DCC_DcuOutput>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="GCSoft.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="Application\Dao\Persistence\Persistence.pas">
+				<Form>dao</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Commun\CommunDao.pas">
+				<Form>commonDao</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Modules\Belzama\UMdAdmin.pas">
+				<Form>MdAdmin</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Modules\Dega\DegaDao.pas">
+				<Form>MdDega</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Modules\JeanPaul\JPDao.pas">
+				<Form>MdJP</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Modules\Winiga\GeorgesDao.pas">
+				<Form>MdGeorges</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Application\Services\Commons\CryptageService.pas"/>
+			<DCCReference Include="Application\Services\Commons\ExcelService.pas"/>
+			<DCCReference Include="Application\Services\Commons\MathService.pas"/>
+			<DCCReference Include="Application\Services\Commons\StringService.pas"/>
+			<DCCReference Include="Application\Services\Commons\WindowsService.pas"/>
+			<DCCReference Include="Application\Services\Dao\DaoService.pas"/>
+			<DCCReference Include="Application\Services\FormUtil\FormService.pas"/>
+			<DCCReference Include="Application\Services\Modules\Belzama\BelzamaFonction.pas"/>
+			<DCCReference Include="Application\Services\Modules\Belzama\fonctionAdmin.pas"/>
+			<DCCReference Include="Application\Services\Modules\Winiga\GeorgesFonction.pas"/>
+			<DCCReference Include="Application\SrcFiles\Commun\UFApropos.pas">
+				<Form>FApropos</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Commun\UFSplash.pas">
+				<Form>FSplash</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Commun\UMainForm.pas">
+				<Form>MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Samples\UFSamples.pas">
+				<Form>FSamples</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Commun\UFTheme.pas">
+				<Form>FTheme</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Commun\UFChangerMDP.pas">
+				<Form>FChangerMDP</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Commun\ULogin.pas">
+				<Form>FLogin</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Admin\UFGestionDroitAcces.pas">
+				<Form>FGestionDroitAcces</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Admin\UFGestionFonctionMenu.pas">
+				<Form>FGestionFonctionMenu</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Admin\UFGestionUtilisateur.pas">
+				<Form>FGestionUtilisateur</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Admin\UFSysParam.pas">
+				<Form>FSysParam</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Admin\UFUpdater.pas">
+				<Form>FUpdater</Form>
+			</DCCReference>
+			<DCCReference Include="Pconnex\UFConfigConnex.pas">
+				<Form>FConfigConnex</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFBanque.pas">
+				<Form>FBanque</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFClient.pas">
+				<Form>FClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFCommande.pas">
+				<Form>FCommande</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFDetailCommande.pas">
+				<Form>FDetailCommande</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFFournisseur.pas">
+				<Form>FFournisseur</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFLivraison.pas">
+				<Form>FLivraison</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFLivraisonCmde.pas">
+				<Form>FLivraisonCmde</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFLivraisonStock.pas">
+				<Form>FLivraisonStock</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFMagasin.pas">
+				<Form>FMagasin</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFMajCommande.pas">
+				<Form>FMajCommande</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFModeReglement.pas">
+				<Form>FModeReglement</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFProduit.pas">
+				<Form>FProduit</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFSaisieStock.pas">
+				<Form>FSaisieStock</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFValiderCommande.pas">
+				<Form>FValiderCommande</Form>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Commun\UMdMaz.pas">
+				<Form>MdMaz</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Recup\UFAgent.pas">
+				<Form>FAgent</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Dega\UFSystemeLog.pas">
+				<Form>FJournalSysteme</Form>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Entities\sysParam.pas"/>
+			<DCCReference Include="Application\Dao\Entities\sysParamBis.pas"/>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFAnnulCmdeClient.pas">
+				<Form>FAnnulCmdeClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFCmdeClient.pas">
+				<Form>FCmdeClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFDetailCmdeClient.pas">
+				<Form>FDetailCmdeClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFLivraisonClient.pas">
+				<Form>FLivraisonClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFSaisieCmdeClient.pas">
+				<Form>FSaisieCmdeClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFSaisieLivrClient.pas">
+				<Form>FSaisieLivrClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFProforma.pas">
+				<Form>FProforma</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFSaisieProforma.pas">
+				<Form>FSaisieProforma</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFValCmdeClient.pas">
+				<Form>FValCmdeClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Winiga\UFAnnulerCommande.pas">
+				<Form>FAnnulerCommande</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Commun\UFWaitingGradient.pas">
+				<Form>FWaitingGradient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFProduitFini.pas">
+				<Form>FProduitFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFUniteMesure.pas">
+				<Form>FUniteMesure</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFDetailLivrClient.pas">
+				<Form>FDetailLivrClient</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFGenererFacture.pas">
+				<Form>FGenererFacture</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFTypeProduit.pas">
+				<Form>FTypeProduit</Form>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Thread\AdoQueryThread.pas"/>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFCompoProdFini.pas">
+				<Form>FCompoProdFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFTarifAchat.pas">
+				<Form>FTarifAchat</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFAnnulerFacture.pas">
+				<Form>FAnnulerFacture</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFDetailFacture.pas">
+				<Form>FDetailFacture</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFEditerFacture.pas">
+				<Form>FEditerFacture</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Belzama\UFValiderFacture.pas">
+				<Form>FValiderFacture</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFStockInitProduit.pas">
+				<Form>FStockInitProduit</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFStockInitProduitFini.pas">
+				<Form>FStockInitProduitFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFTarifVente.pas">
+				<Form>FTarifVente</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFCreateInventaireProd.pas">
+				<Form>FCreateInventaireProd</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFCreateInventaireProdFini.pas">
+				<Form>FCreateInventaireProdFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFInventaireProd.pas">
+				<Form>FInventaireProd</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFInventaireProdFini.pas">
+				<Form>FInventaireProdFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFMiseEnStockProduit.pas">
+				<Form>FMiseEnStockProduit</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFMiseEnStockProduitFini.pas">
+				<Form>FMiseEnStockProduitFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFViewInventaireProd.pas">
+				<Form>FViewInventaireProd</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFViewInventaireProdFini.pas">
+				<Form>FViewInventaireProdFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFReinitStockProduit.pas">
+				<Form>FReinitStockProduit</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFReinitStockProduitFini.pas">
+				<Form>FReinitStockProduitFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFStockTheorique.pas">
+				<Form>FStockTheorique</Form>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Modules\Belzama\BeleiDao.pas">
+				<Form>MdBelei</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Application\Dao\Entities\commandeClient.pas"/>
+			<DCCReference Include="Application\Dao\Entities\detCmdeClient.pas"/>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFTransfertProduit.pas">
+				<Form>FTransfertProduit</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFTransfertProduitFini.pas">
+				<Form>FTransfertProduitFini</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFRuptureStock.pas">
+				<Form>FRuptureStock</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\Winiga\UFReglerFacture.pas">
+				<Form>FReglerFacture</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFListeCommandeClient.pas">
+				<Form>FListeCommande</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFListeFacture.pas">
+				<Form>FListeFacture</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFListeBonLivraison.pas">
+				<Form>FListeBonLivraison</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFTableauBord.pas">
+				<Form>FTableauBord</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFJournalReglement.pas">
+				<Form>FJournalReglement</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFListeClientRedevable.pas">
+				<Form>FListeClientRedevable</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFListeEtatDiff.pas">
+				<Form>FListeEtatDiff</Form>
+			</DCCReference>
+			<DCCReference Include="Application\SrcFiles\Modules\JeanPaul\UFChronoApp.pas">
+				<Form>FChronoApp</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">2</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1036</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">CORGU TECH</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">Logiciel de Gestion commerciale</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.0.0.2</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">GCSOFT</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">@2015 - 2017</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename">GCSoft</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">GCSoft.dpr</Source>
+					</Source>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k150.bpl">Package Serveurs Office 2000 Embarcadero C++Builder</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k150.bpl">Composants Microsoft Office 2000 Sample Automation Server Wrapper</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dclofficexp150.bpl">Composants Microsoft Office XP Sample Automation Server Wrapper</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

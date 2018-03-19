@@ -1,0 +1,60 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{49345BA9-4CF9-44FC-9168-01C81530E490}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="GCSoft.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Updater\Updater.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Pconnex\Connex.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="GCSoft">
+			<MSBuild Projects="GCSoft.dproj"/>
+		</Target>
+		<Target Name="GCSoft:Clean">
+			<MSBuild Projects="GCSoft.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="GCSoft:Make">
+			<MSBuild Projects="GCSoft.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Updater">
+			<MSBuild Projects="Updater\Updater.dproj"/>
+		</Target>
+		<Target Name="Updater:Clean">
+			<MSBuild Projects="Updater\Updater.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Updater:Make">
+			<MSBuild Projects="Updater\Updater.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Connex">
+			<MSBuild Projects="Pconnex\Connex.dproj"/>
+		</Target>
+		<Target Name="Connex:Clean">
+			<MSBuild Projects="Pconnex\Connex.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Connex:Make">
+			<MSBuild Projects="Pconnex\Connex.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="GCSoft;Updater;Connex"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="GCSoft:Clean;Updater:Clean;Connex:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="GCSoft:Make;Updater:Make;Connex:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

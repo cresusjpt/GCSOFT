@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/09/21 02:23:36.000.593,=D:\GCSOFT\img\annuler.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:36.000.858,=D:\GCSOFT\img\effacer.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:37.000.140,=D:\GCSOFT\img\effacer.png</Transaction>
+    <Transaction>2017/09/21 02:23:37.000.954,=D:\GCSOFT\img\exporter.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:37.000.665,=D:\GCSOFT\img\enregistrer.png</Transaction>
+    <Transaction>2017/09/21 02:23:37.000.404,=D:\GCSOFT\img\enregistrer.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:38.000.810,=D:\GCSOFT\img\gesbon_icone2.ico</Transaction>
+    <Transaction>2017/09/21 02:23:38.000.489,=D:\GCSOFT\img\generer.PNG</Transaction>
+    <Transaction>2017/09/21 02:23:38.000.219,=D:\GCSOFT\img\fermer.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:39.000.409,=D:\GCSOFT\img\imprimer.png</Transaction>
+    <Transaction>2017/09/21 02:23:39.000.133,=D:\GCSOFT\img\gesbon_icone3.ico</Transaction>
+    <Transaction>2017/09/21 02:23:39.000.998,=D:\GCSOFT\img\logo_corgu_big.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:39.000.698,=D:\GCSOFT\img\logo_corgu.png</Transaction>
+    <Transaction>2017/09/21 02:23:40.000.864,=D:\GCSOFT\img\reinitialiser.BMP</Transaction>
+    <Transaction>2017/09/21 02:23:40.000.282,=D:\GCSOFT\img\modifier.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:40.000.562,=D:\GCSOFT\img\rechercher.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:41.000.148,=D:\GCSOFT\img\rupture_de_stock.png</Transaction>
+    <Transaction>2017/09/21 02:23:41.000.441,=D:\GCSOFT\img\rupture_Stock.jpg</Transaction>
+    <Transaction>2017/09/21 02:23:41.000.726,=D:\GCSOFT\img\ruptureStock.jpg</Transaction>
+    <Transaction>2017/09/21 02:23:42.000.328,=D:\GCSOFT\img\supprimer.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:42.000.625,=D:\GCSOFT\img\supprimer.png</Transaction>
+    <Transaction>2017/09/21 02:23:42.000.958,=D:\GCSOFT\img\valider.bmp</Transaction>
+    <Transaction>2017/09/21 02:23:42.000.038,=D:\GCSOFT\img\stock_rupture.jpg</Transaction>
+    <Transaction>2017/09/21 02:23:43.000.252,=D:\GCSOFT\img\valider.png</Transaction>
+    <Transaction>2017/09/21 02:24:26.000.002,D:\GCSOFT\img\enregistrer.png=</Transaction>
+    <Transaction>2017/09/21 02:24:26.000.456,D:\GCSOFT\img\enregistrer.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:26.000.925,D:\GCSOFT\img\supprimer.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:26.000.687,D:\GCSOFT\img\supprimer.png=</Transaction>
+    <Transaction>2017/09/21 02:24:27.000.157,D:\GCSOFT\img\modifier.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:27.000.850,D:\GCSOFT\img\rupture_Stock.jpg=</Transaction>
+    <Transaction>2017/09/21 02:24:27.000.389,D:\GCSOFT\img\imprimer.png=</Transaction>
+    <Transaction>2017/09/21 02:24:27.000.617,D:\GCSOFT\img\exporter.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:28.000.996,D:\GCSOFT\img\rechercher.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:28.000.079,D:\GCSOFT\img\fermer.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:28.000.303,D:\GCSOFT\img\stock_rupture.jpg=</Transaction>
+    <Transaction>2017/09/21 02:24:28.000.755,D:\GCSOFT\img\ruptureStock.jpg=</Transaction>
+    <Transaction>2017/09/21 02:24:28.000.532,D:\GCSOFT\img\rupture_de_stock.png=</Transaction>
+    <Transaction>2017/09/21 02:24:29.000.217,D:\GCSOFT\img\logo_corgu.png=</Transaction>
+    <Transaction>2017/09/21 02:24:29.000.904,D:\GCSOFT\img\generer.PNG=</Transaction>
+    <Transaction>2017/09/21 02:24:29.000.440,D:\GCSOFT\img\valider.png=</Transaction>
+    <Transaction>2017/09/21 02:24:29.000.657,D:\GCSOFT\img\valider.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:30.000.433,D:\GCSOFT\img\effacer.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:30.000.995,D:\GCSOFT\img\logo_corgu_big.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:30.000.249,D:\GCSOFT\img\effacer.png=</Transaction>
+    <Transaction>2017/09/21 02:24:30.000.611,D:\GCSOFT\img\annuler.bmp=</Transaction>
+    <Transaction>2017/09/21 02:24:30.000.808,D:\GCSOFT\img\reinitialiser.BMP=</Transaction>
+    <Transaction>2017/09/21 02:24:31.000.362,D:\GCSOFT\img\gesbon_icone2.ico=</Transaction>
+    <Transaction>2017/09/21 02:24:31.000.175,D:\GCSOFT\img\gesbon_icone3.ico=</Transaction>
+    <Transaction>2017/12/06 11:48:36.000.214,=D:\GCSOFT\Unit1.pas</Transaction>
+    <Transaction>2017/12/06 11:50:35.000.235,D:\GCSOFT\Application\SrcFiles\Modules\JeanPaul\UFChronoApp.dfm=D:\GCSOFT\Unit1.dfm</Transaction>
+    <Transaction>2017/12/06 11:50:35.000.235,D:\GCSOFT\Application\SrcFiles\Modules\JeanPaul\UFChronoApp.pas=D:\GCSOFT\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
